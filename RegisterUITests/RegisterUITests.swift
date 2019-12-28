@@ -2,7 +2,7 @@
 //  RegisterUITests.swift
 //  RegisterUITests
 //
-//  Created by admin2 on 28/12/19.
+//  Created by Nithin on 28/12/19.
 //  Copyright © 2019 Nithin. All rights reserved.
 //
 
@@ -27,9 +27,19 @@ class RegisterUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        app.navigationBars["Music Students"].buttons["plus"].tap()
+        
+        let elementsQuery = app.alerts["Add New Student"].scrollViews.otherElements
+        let collectionViewsQuery = elementsQuery.collectionViews
+        let nameTextField = collectionViewsQuery.textFields["Name"]
+        nameTextField.tap()
+        let courseTextField = collectionViewsQuery/*@START_MENU_TOKEN@*/.textFields["Course"]/*[[".cells.textFields[\"Course\"]",".textFields[\"Course\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        courseTextField.tap()
+        let ageTextField = collectionViewsQuery/*@START_MENU_TOKEN@*/.textFields["Age"]/*[[".cells.textFields[\"Age\"]",".textFields[\"Age\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        ageTextField.tap()
+        
+        elementsQuery.buttons["Save"].tap()
     }
 
     func testLaunchPerformance() {
