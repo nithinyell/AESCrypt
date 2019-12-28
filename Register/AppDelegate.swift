@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Register
 //
-//  Created by admin2 on 28/12/19.
+//  Created by Nithin on 28/12/19.
 //  Copyright © 2019 Nithin. All rights reserved.
 //
 
@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
+    
         return true
     }
 

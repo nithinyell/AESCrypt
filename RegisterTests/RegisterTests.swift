@@ -2,7 +2,7 @@
 //  RegisterTests.swift
 //  RegisterTests
 //
-//  Created by admin2 on 28/12/19.
+//  Created by Nithin on 28/12/19.
 //  Copyright © 2019 Nithin. All rights reserved.
 //
 

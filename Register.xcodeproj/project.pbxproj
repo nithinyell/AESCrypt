@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		BC10A63523B74EA4000F519B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A63423B74EA4000F519B /* AppDelegate.swift */; };
 		BC10A63723B74EA4000F519B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A63623B74EA4000F519B /* SceneDelegate.swift */; };
-		BC10A63923B74EA4000F519B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A63823B74EA4000F519B /* ViewController.swift */; };
+		BC10A63923B74EA4000F519B /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A63823B74EA4000F519B /* StudentViewController.swift */; };
 		BC10A63C23B74EA4000F519B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC10A63A23B74EA4000F519B /* Main.storyboard */; };
 		BC10A63F23B74EA4000F519B /* Register.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC10A63D23B74EA4000F519B /* Register.xcdatamodeld */; };
 		BC10A64123B74EA5000F519B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC10A64023B74EA5000F519B /* Assets.xcassets */; };
 		BC10A64423B74EA5000F519B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC10A64223B74EA5000F519B /* LaunchScreen.storyboard */; };
 		BC10A64F23B74EA5000F519B /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A64E23B74EA5000F519B /* RegisterTests.swift */; };
 		BC10A65A23B74EA5000F519B /* RegisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A65923B74EA5000F519B /* RegisterUITests.swift */; };
+		BC10A66823B7591D000F519B /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A66723B7591D000F519B /* StudentTableViewCell.swift */; };
+		BC10A66A23B764DB000F519B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A66923B764DB000F519B /* DataManager.swift */; };
+		BC10A66C23B77E2E000F519B /* AESCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10A66B23B77E2E000F519B /* AESCrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		BC10A63123B74EA4000F519B /* Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Register.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC10A63423B74EA4000F519B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC10A63623B74EA4000F519B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC10A63823B74EA4000F519B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC10A63823B74EA4000F519B /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		BC10A63B23B74EA4000F519B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC10A63E23B74EA4000F519B /* Register.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Register.xcdatamodel; sourceTree = "<group>"; };
 		BC10A64023B74EA5000F519B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,10 @@
 		BC10A65523B74EA5000F519B /* RegisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC10A65923B74EA5000F519B /* RegisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUITests.swift; sourceTree = "<group>"; };
 		BC10A65B23B74EA5000F519B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC10A66723B7591D000F519B /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		BC10A66923B764DB000F519B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BC10A66B23B77E2E000F519B /* AESCrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AESCrypt.swift; sourceTree = "<group>"; };
+		BC10A66D23B77E86000F519B /* AESCrypt-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AESCrypt-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +108,16 @@
 		BC10A63323B74EA4000F519B /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				BC10A67023B785D6000F519B /* CoreData */,
+				BC10A66F23B78215000F519B /* AESCrypt */,
 				BC10A63423B74EA4000F519B /* AppDelegate.swift */,
 				BC10A63623B74EA4000F519B /* SceneDelegate.swift */,
-				BC10A63823B74EA4000F519B /* ViewController.swift */,
+				BC10A63823B74EA4000F519B /* StudentViewController.swift */,
+				BC10A66723B7591D000F519B /* StudentTableViewCell.swift */,
 				BC10A63A23B74EA4000F519B /* Main.storyboard */,
 				BC10A64023B74EA5000F519B /* Assets.xcassets */,
 				BC10A64223B74EA5000F519B /* LaunchScreen.storyboard */,
 				BC10A64523B74EA5000F519B /* Info.plist */,
-				BC10A63D23B74EA4000F519B /* Register.xcdatamodeld */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -129,6 +138,24 @@
 				BC10A65B23B74EA5000F519B /* Info.plist */,
 			);
 			path = RegisterUITests;
+			sourceTree = "<group>";
+		};
+		BC10A66F23B78215000F519B /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				BC10A66B23B77E2E000F519B /* AESCrypt.swift */,
+				BC10A66D23B77E86000F519B /* AESCrypt-Bridging-Header.h */,
+			);
+			path = AESCrypt;
+			sourceTree = "<group>";
+		};
+		BC10A67023B785D6000F519B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BC10A66923B764DB000F519B /* DataManager.swift */,
+				BC10A63D23B74EA4000F519B /* Register.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC10A63923B74EA4000F519B /* ViewController.swift in Sources */,
+				BC10A63923B74EA4000F519B /* StudentViewController.swift in Sources */,
+				BC10A66A23B764DB000F519B /* DataManager.swift in Sources */,
+				BC10A66823B7591D000F519B /* StudentTableViewCell.swift in Sources */,
 				BC10A63523B74EA4000F519B /* AppDelegate.swift in Sources */,
 				BC10A63F23B74EA4000F519B /* Register.xcdatamodeld in Sources */,
 				BC10A63723B74EA4000F519B /* SceneDelegate.swift in Sources */,
+				BC10A66C23B77E2E000F519B /* AESCrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Register;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Register/AESCrypt/AESCrypt-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Register;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Register/AESCrypt/AESCrypt-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
